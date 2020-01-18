@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.ul2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f1f6f8;
+}
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color:#f1f1f1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.color{
+background-color:#993300
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: black ;
+}
+
+li.dropdown {
+  display: inline-block;
+
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2f3439;
+  color:#f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left; 
+}
+
+.dropdown-content a:hover {background-color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+  }
+ span{
+	font-size:12px; 
+ }
+
+.borders{
+
+    border-width:6px;  
+    border-top-style:solid ;
+    border-color:#993300;
+   
+
+}
+.border1{
+	padding-bottom: 2px;
+	border-width:12px;  
+    border-top-style:solid ;
+    border-color:#993300;
+}
+
+
+.btn1 {
+
+   background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+
+}
+
+.btn2{
+
+   background-color: #333;
+  border: solid;
+  border-width: 1px;
+  
+  color: white;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+
+}
+.btn1:hover {
+  opacity: 0.8;
+}
+.btn2:hover {
+  opacity: 0.8;
+}
+
+.plan-price-heading{
+	text-align:center;
+	color:#262626;
+}
+
+.plan-price-btn{
+	background-color: #cce0ff;
+	border: 1px solid #4d94ff; 
+	color: #0d0d0d;
+	padding: 10px 25px;
+	font-size: 16px;
+	border-radius: 8px;
+}
+.plan-price-btn-small{
+	background-color: #cce0ff;
+	border: 1px solid #4d94ff; 
+	color: #0d0d0d;
+	padding: 3px 3px;
+	font-size: 12px;
+	border-radius: 16px;
+    float:right;
+}
+.plan-price-btn1{
+	background-color: #ffffff;
+	border: 1px solid #8c8c8c; 
+	color: #0d0d0d;
+	padding: 10px 25px;
+	font-size: 16px;
+	border-radius: 6px;
+}
+.plan-price-btn1:hover{
+	background-color:#EBEBEB;
+}
+.plan-prices{
+	display:grid;
+	grid-template-columns: 1fr;
+	background-color: #f1f6f8;
+}
+
+.plan-price-heading{
+    padding-top:"20%" ;
+    text-align:center;
+	color:#262626;
+}
+
+
+
+.price-info{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	padding-left:35px;
+	padding-right:35px;
+	
+}
+.big_box{
+	display:grid;
+	padding:30px auto;
+	
+	
+}
+.price-info-heading{
+	color:#993300
+}
+
+
+.price-info-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.price-info-btn:hover{
+	background-color:green;
+}
+
+.left{
+	float:right;
+
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li ><img src="semrush.png" height="45" ></li>
+
+  <li><a href="#">Features</a></li>
+  <li class="color"><a href="#">Pricing</a></li>
+  <li><a href="#">Help</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">Academy</a></li>
+    <li><a href="#">Community</a></li>
+   <li class="dropdown">
+    <a href="#" class="dropbtn">Company</a>
+ <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+</div>
+
+    <li><a href="#">Marketplace</a></li>
+	 
+    <div class="left">
+		  <li class="dropdown">
+		    <a href="#" class="dropbtn">EN</a>
+		 <div class="dropdown-content">
+		      <a href="#">konk</a>
+		      <a href="#">marathi</a>
+		      <a href="#">Gujrati</a>
+		</div>
+		   </li> <button class="btn2">LogIn</button>
+		  </li> <button class="btn1">Sign Up</button>
+	</div>
+</ul>
+
+<div class="plan-prices">
+    <h1 class="plan-price-heading">Plans & Pricing</h1>
+<div class="plan-price-heading">
+    <button class="plan-price-btn">Billed Monthly</button>
+    <button class="plan-price-btn1">Billed Anually   <div class="plan-price-btn-small">  save 16%</div></button>
+</div>
+<br/><br/>
+
+
+
+
+
+<div class="price-info">
+    <div class="borders">
+        <h3 class="price-info-heading">Pro</h3>
+        <h2>$99 <span>.95 <br/>per month</span></h2> 
+        <button class="price-info-btn">Try for free</button><hr/>
+        <p>For freelancers, startups and in-house marketers with limited budget Run your SEO, PPC and SMM projects with 40+ advanced tools. Know your competitors’ traffic sources, rankings, social media results & more.</p>
+    </div>
+
+
+    <div class="big_box">
+	   <div class="border1">
+	        <h3 class="price-info-heading">Guru</h3>
+	        <h2>$199 <span>.95 <br/> per month</span></h2>
+	        <button class="price-info-btn">Try for free</button><hr/>
+	        <p>
+	            For SMB and growing marketing agencies
+	            All the Pro features plus:
+	            Content Marketing Platform
+	            Branded reports
+	            Historical Data
+	            Extended limits
+	        </p>
+	    </div>
+	</div>
+
+    <div class="borders">
+        <h3 class="price-info-heading">Business</h3>
+        <h2>$399<span>.95  <br/>per month</span></h2>
+        <button class="price-info-btn">Subscribe</button><hr/>
+        <p>For agencies, E-commerce projects and businesses with extensive web presence
+        All the Guru features plus:
+        <ul class="ul2">
+        <li>White label reports</li>
+        <li>API access</li>
+        <li>Extended limits and sharing options</li>
+        <li>Google Data Studio Integration</li>
+        </ul>
+        </p>
+    </div>
+    <div class="borders">
+        <h3 class="price-info-heading">Enterprice</h3>
+        <h2>Need More?</h2>
+        <button class="price-info-btn">Contact Us</button><hr/>
+        <p>
+        <ul class="ul2">
+        A custom solution to fit the marketing needs of your business
+        <li>Custom keyword databases</li>
+        <li>Custom limits</li>
+        <li>Unlimited crawling of large websites</li>
+        <li>On-site training</li>
+        <li>And other add-on features upon request</li>
+        </ul>
+        </p>
+    </div>
+</div>
+<img src="cards.png">
+
+</body>
+</html>
