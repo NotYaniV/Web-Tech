@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height:auto; 
+  width:auto;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .column {
+    width: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Three Column Layout</h2>
+<p>NARUTO BOOK</p>
+
+<div class="row">
+  <div class="column" >
+<h2>NARUTO SHIPPUDEN</h2>
+<img src="1.jpg">
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <p>With the Infinite Tsukuyomi finally activated, the ninja world is plunged into darkness. But worse still is that Kaguya has been resurrected. With Naruto and Sasuke working together, they have the power to seal her away for good. But just when it seems that the ninja world can find true peace, one more obstacle appears. With their differing ideals on the line, Naruto and Sasuke will determine the future of the world in this final fight!</p>
+
+  </div>
+  <div class="column" style="background-color:#ccc;">
+
+
+  </div>
+</div>
+
+</body>
+</html>
+
+  

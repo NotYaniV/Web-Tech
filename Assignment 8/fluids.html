@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Two-column fluid layout</title>
+</head>
+<style>
+    * {
+	margin:0;
+	padding:0;
+	border:0;
+}
+#wrapper {
+	border: 1px solid #000;
+}
+#header {
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	background-color: #FF5733 ;
+}
+
+#menu {
+	width: 180px;
+	float: left;
+	padding: 10px;
+	border-right: 1px solid #000;
+	background-color: #FFC300 ;
+}
+
+#content {
+	margin-left: 200px;
+	border-left: 1px solid #000;
+	padding: 10px;
+	line-height: 2em;
+	background-color:#6FC1FA  ;
+}
+
+.clearer {
+	clear: both;
+}
+
+</style>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<h1>Two-column fluid layout</h1>
+	</div>
+	<div id="main">
+		<div id="menu">
+			<h2>Menu</h2>
+			<p>This column is fixed.</p>
+			
+		</div>
+		<div id="content">
+			<h2>Content</h2>
+			<p>This column is fluid.</p>
+		</div>
+		
+	</div>
+	
+</div>
+</body>
+</html>
