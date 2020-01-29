@@ -32,15 +32,16 @@ function evenOdd(number) {
 	var temp=number;
 	if(number%2==0)
 	{
-		console.log(temp + " is an even number");
+		//console.log(temp + " is an even number");
+		return temp + " is an even number";
 	}
 	else
 	{
-		console.log(temp + " is an odd number");
-
+		//console.log(temp + " is an odd number");
+		return temp + " is an odd number"
 	}
 }
-evenOdd(number);
+console.log( evenOdd(number) );
 
 //FUNCTION TO FIND PRIME NUMBER//
 
@@ -49,7 +50,8 @@ function prime(n) {
 	
 		   if(n===0)
 		   {
-			   console.log("0 is neither prime, nor composite number")
+			  // console.log("0 is neither prime, nor composite number")
+			   return "0 is neither prime, nor composite number"
 		   }
 		    if(n===1)
 		   {
@@ -64,12 +66,14 @@ function prime(n) {
 		   }      
             // Check and display output 
             if (flag == true) 
-                console.log(n + " is prime"); 
+                //console.log(n + " is prime"); 
+				return n + " is prime";
             else
-                console.log(n + " is not prime"); 
+                //console.log(n + " is not prime"); 
+				return n + " is not prime ";
 } 
 
-prime(n);
+console.log( prime(n) );
 
 //FUNCTION TO FIND REVERSE OF A NUMBER//
 
@@ -83,10 +87,11 @@ function reverseNumber(numberRev){
 	  sum = sum * 10 + remainder;
 	  numberRev = parseInt( numberRev / 10 );  //The parseInt() function parses a string and returns an integer.
 	}
-	console.log("The reverse of "+temp +" is "+sum);
+	//console.log("The reverse of "+temp +" is "+sum);
+	return "The reverse of "+temp +" is "+sum;
 }
 
-reverseNumber(num1);
+console.log( reverseNumber(num1) );
 
 
 //FUNCTION TO FIND ARMSTRONG NUMBER//
@@ -102,13 +107,15 @@ function armstrongNumber(armNumber){
 	}    
 
 		if(armNumber==sum)    
-			console.log(armNumber + " is a armstrong  number ");    
+			//console.log(armNumber + " is a armstrong  number ");    
+			return armNumber + " is a armstrong  number ";
 		else    
-			console.log(armNumber + " not armstrong number");    
+			//console.log(armNumber + " not armstrong number"); 
+			return armNumber + " not armstrong number";
 		return 0;  
 }	
-armstrongNumber(150);
-
+console.log ( armstrongNumber(150) );
+ 
 //FUNCTION TO FIND FIBONACCI SERIES//
 
 
@@ -122,7 +129,9 @@ function fibonacciList(fibNum){
         fibString += " " +nextTerm;  //saving the numbers in
 	    firstNumber= secondNumber;
         secondNumber = nextTerm;
-      }console.log(fibString);
+      }
+	  ///console.log(fibString);
+	  return fibString;
 }
 
-fibonacciList(10);
+console.log( fibonacciList(10) );

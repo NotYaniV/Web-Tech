@@ -6,11 +6,12 @@ function printArray(a){
 	for (var i in a)
 	{
 			
-			string += " " + a[i];
+			string += " " + a[i]; // string = string + "" +array[i]
 	}
-	console.log("The array is "+string);
+	//console.log("The array is "+string);
+	return "The array is "+string;
 }
-printArray(a);
+console.log ( printArray(a) );
 
 function sumArray(a){
 	//var a = [1,2,3,4,5];
@@ -21,9 +22,10 @@ function sumArray(a){
 			sum += a[i];
 			//sum+= " " + a[i];
 	}
-	console.log("The sum of array is "+sum);
+	//console.log("The sum of array is "+sum);
+	return "The sum of array is "+sum;
 }
-sumArray(a);
+console.log (sumArray(a) );
 
 function maxArray(a){
 	//var a = [11,12,30,4,5];
@@ -36,9 +38,10 @@ function maxArray(a){
 			max=a[i];
 		}
 	}
-	console.log("The max number in array is "+max);
+	//console.log("The max number in array is "+max);
+	return "The max number in array is "+max ;
 }
-maxArray(a);
+console.log ( maxArray(a) );
 
 function minArray(a){
 	//var a = [1,2,3,4,5];
@@ -51,6 +54,25 @@ function minArray(a){
 			min=a[i];
 		}
 	}
-	console.log("The min number in array is "+min);
+	//console.log("The min number in array is "+min);
+	return "The min number in array is "+min ;
 }
-minArray(a);
+console.log( minArray(a) );
+
+
+function sorting(a){
+	var temp,string="";
+	var n= a.length;
+	for ( i = 0; i < n-1; i++){ 
+			for ( j = 0; j < n-i-1; j++){
+						if(a[j] > a[j+1]){
+							temp=a[j];
+							a[j]=a[j+1];
+							a[j+1]=temp;
+							
+						}
+					}
+				}
+		return a;
+}
+console.log(sorting(a));
