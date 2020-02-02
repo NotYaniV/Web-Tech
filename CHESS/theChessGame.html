@@ -1,0 +1,207 @@
+<html>
+<head>
+<meta charset="UTF-8"> 
+<title>CHESS GAME</title>
+<style type="text/css">
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+body {
+  background: #282828;/* match border color */
+  text-align: center;
+}
+.logo {
+  font: 84px 'Arial Narrow', sans-serif;
+  color: #FEF9E7;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
+
+
+.logo span {
+  position: relative;
+}
+.logo span:before,
+.logo span:after {
+  content: '';
+  position: absolute;
+  border-width: 32px;
+  border-style: solid;
+  border-color: transparent;
+  height: 0;
+  z-index: 10;
+}
+
+/* stuff for 1st word */
+.logo .word1 {
+  color: #52BE80 ;
+  margin-right: -38px;
+  transform: rotateY(180deg);
+  display: inline-block;
+  z-index: 10;
+}
+.logo .word1:before {
+  right: -4px;
+  top: -9px;
+  border-top-color: #282828;
+  border-right-color: #282828;
+}
+.logo .word1:after {
+  left: 17px;
+  bottom: -15px;
+  border-bottom-color: #282828;
+  border-left-color: #282828;
+}
+
+
+.logo .word2 {
+  z-index: 0;
+}
+.logo .word2:before {
+  left: -4px;
+  top: -6px;
+  border-top-color: #282828;
+  border-left-color: #282828;
+}
+.logo .word2:after {
+  right: -4px;  
+  bottom: 4px;
+  border-bottom-color: #282828;
+  border-right-color: #282828;
+}
+
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.chessboard {
+    width: 640px;
+    height: 640px;
+    
+    margin: 10PX;
+    border: 5px solid ;
+    margin-left: 25% ;
+}
+.black {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background-color: #52BE80   ;
+      font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+.white {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background-color: #FEF9E7 ;
+    font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+.pieces{
+    width: 75px;
+    height: 75px;
+    vertical-align:middle;
+}
+
+@media screen and (max-width:400px) {
+    .background{
+        transform: scale(0.7);
+    }
+
+</style>
+<body>
+<h1 class="logo">
+  <span class="word1">THE</span>
+  <span class="word2">chess game</span>
+</h1>
+   <div class="chessboard">
+       
+
+            <div class="white"> <img class="pieces" src="icons/B_hatti.png"> </div>  
+            <div class="black"> <img class="pieces" src="icons/B_ghodo.png"> </div>
+            <div class="white"> <img class="pieces" src="icons/B_hunt.png"></div>
+            <div class="black"> <img class="pieces" src="icons/B_rani.png"></div>
+            <div class="white"> <img class="pieces" src="icons/B_raja.png"></div>
+            <div class="black"> <img class="pieces" src="icons/B_hunt.png"></div>
+            <div class="white"> <img class="pieces" src="icons/B_ghodo.png"></div>
+            <div class="black"> <img class="pieces" src="icons/B_hatti.png"></div>
+            
+            <div class="black"> <img class="pieces" src="icons/B_shipai.png"></div>
+            <div class="white"> <img class="pieces" src="icons/B_shipai.png"></div>
+            <div class="black"> <img class="pieces" src="icons/B_shipai.png"></div>
+            <div class="white"> <img class="pieces" src="icons/B_shipai.png"></div>
+            <div class="black"> <img class="pieces" src="icons/B_shipai.png"></div>
+            <div class="white"> <img class="pieces" src="icons/B_shipai.png"></div>
+            <div class="black"> <img class="pieces" src="icons/B_shipai.png"></div>
+            <div class="white"> <img class="pieces" src="icons/B_shipai.png"></div>
+     
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+       
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            
+            <div class="white"> <img class="pieces" src="icons/W_shipai.png"></div>
+            <div class="black"> <img class="pieces" src="icons/W_shipai.png"></div>
+            <div class="white"> <img class="pieces" src="icons/W_shipai.png"></div>
+            <div class="black"> <img class="pieces" src="icons/W_shipai.png"></div>
+            <div class="white"> <img class="pieces" src="icons/W_shipai.png"></div>
+            <div class="black"> <img class="pieces" src="icons/W_shipai.png"></div>
+            <div class="white"> <img class="pieces" src="icons/W_shipai.png"></div>
+            <div class="black"> <img class="pieces" src="icons/W_shipai.png"></div>
+            
+            <div class="black"> <img class="pieces" src="icons/W_hatti.png"> </div>
+            <div class="white"> <img class="pieces" src="icons/W_ghodo.png"></div>
+            <div class="black"> <img class="pieces" src="icons/W_hunt.png"></div>
+            <div class="white"> <img class="pieces" src="icons/W_rani.png"></div>
+            <div class="black"> <img class="pieces" src="icons/W_raja.png"></div>
+            <div class="white"> <img class="pieces" src="icons/W_hunt.png"></div>
+            <div class="black"> <img class="pieces" src="icons/W_ghodo.png"></div>
+            <div class="white"> <img class="pieces" src="icons/W_hatti.png"></div>
+        </div>
+ 
+</body>
+</head>
+</html>
+
+
