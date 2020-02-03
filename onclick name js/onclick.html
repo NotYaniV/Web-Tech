@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#myDIV {
+  display: none;
+}
+</style>
+</head>
+<body>
+  <script>
+ function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<p>Question:<p onclick="myFunction('myDIV')">WHAT IS MY NAME ?</p></p>
+<div>Answer:<div id="myDIV">VINAY PRABHU</div>
+
+
+
+</body>
+</html>
+
