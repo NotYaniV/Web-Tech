@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		*{
+			margin:0px;
+			padding: 0px; 
+		}
+
+		.rImg {
+			margin: auto;
+			width: 50%;
+			padding: 10px;
+		} 
+		#resizableImage{
+			width: 500px;
+			height: 500px;
+		}
+
+	</style>
+</head>
+
+<body onresize="RESIZE()" bgcolor="grey" >
+	<h1>GO TO INSPECT AND RESIZE TO SEE THE CHANGE</h1>
+	<div class="rImg">
+		<img id="resizableImage" src="black.jpg"> </img>
+	</div>
+	<script>
+		function RESIZE() {
+			
+			if (window.outerWidth <= 399) { //check for width of window for <400px
+				document.getElementById("resizableImage").src = "400.jpg"; //set the image
+				document.getElementById("resizableImage").width = "50px"; //set width and height
+				document.getElementById("resizableImage").height = "50px";
+			}
+		
+			if (window.outerWidth <= 800) { //check for width of window for <800px
+				document.getElementById("resizableImage").src = "mid.jpg"; //set the image
+				document.getElementById("resizableImage").width = "200px";
+				document.getElementById("resizableImage").height = "200px";
+			}
+			
+			if (window.outerWidth>= 800) { //check for width of window for >800px
+				document.getElementById("resizableImage").src = "800.jpg"; //set the image
+				document.getElementById("resizableImage").width = "500px";
+				document.getElementById("resizableImage").height = "500px";
+			}
+		}
+	</script>
+
+</body>
+
+</html>
