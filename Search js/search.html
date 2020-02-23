@@ -1,0 +1,203 @@
+<html>
+<head>
+
+
+<style>
+	.innerTopBox{
+		border:2px solid  green;
+		margin-top: 20px;
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+	
+	.outerBox{
+		border:2px solid red;
+		margin-left: 20%;
+		margin-right: 20%;
+		position: relative;
+	}
+
+	.innerDownBox{
+		border: 2px solid purple;
+		margin-top: 10px;
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		width:auto;
+		height: 250px;
+	}
+
+	.downBox{
+		border: 2px solid orange;
+		margin-top: 20px;
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+
+	.p{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.align{
+		align-content: center;
+		margin-left: 300px; 
+	}
+	.align1{
+		margin-left: 200px;
+		margin-top: 50px;
+		font-weight: bold;
+	}
+
+	#Elective{
+		margin-left: 200px;
+		margin-top: 10px;
+		font-weight: bold;
+	}
+	.search{
+		margin-left: 350px;
+		margin-top: 10px;
+	}
+	.p1{
+		font-weight: bold;
+		text-decoration: underline;
+
+	}
+	#search_para
+	{
+	 color:grey;
+	}
+	.highlight
+	{
+	 /*color:blue;*/
+	 background-color: yellow ;
+	 /*text-decoration:underline;*/
+	}
+	
+</style>
+<body >
+	<div class="align2">
+	<input type="text" id="search_text">
+	<input type="button" value="search" id="search">
+	 </div>
+	<div class="outerBox">
+		
+		<div class="innerTopBox" >
+
+				<p id="search_para">Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks to gain recognition from his peers and also dreams of becoming the Hokage, the leader of his village. The story is in two parts, the first set in Naruto's pre-teen years, and the second in his teens. The series is based on two one-shot manga by Kishimoto: Karakuri (1995), which earned Kishimoto an honorable mention in Shueisha's monthly Hop Step Award the following year, and Naruto (1997)</p>
+
+		</div>
+		<div class="innerDownBox">
+				  	<br/>
+				  	<div class="align">
+					  	
+						
+	     			</div>
+	     			<div class="align1">
+				  		<input type="radio" name="search" id="searchText" checked> Search By Text
+				    	<input type="radio" name="search" id="regulareExp"> Search By Regular Expression
+	 				</div>
+				    <br/>
+				    <div id="Elective" >
+		              
+		              <input type="checkbox" name="checkbox[]" id="case" value=" Case Insensitive"> Case Insensitive</br>
+		              <input type="checkbox" name="checkbox[]" id="wholeWord" value="  Match Whole Word"> Match Whole Word</br>
+		              
+	               </div>
+	               <div class="search">
+	              
+
+				   </div>
+				   
+			</div>
+		
+			<div class="downBox">
+				<p class="p1">Simple Regular Expression: /pattern/flag(s)</p>
+				<p>/the/g<br/>/an/gi</p>
+			</div>
+		
+	</div>
+<script>
+document.addEventListener( 'DOMContentLoaded',function(){
+ var searchpara=document.getElementById("search_para").innerHTML;
+ searchpara=searchpara.toString();
+ document.getElementById("search").onclick=function ()
+ {highlight_word(searchpara)};	
+},false);
+
+function highlight_word(searchpara)
+{
+	var caseInsen=document.getElementById("Elective").value;
+	console.log(caseInsen);
+		/*var matchWhole=document.getElementById("wh").value;
+		console.log(matchWhole);*/
+	var text=document.getElementById("search_text").value;
+	console.log(text);
+ 	var checkboxes = document.getElementsByName('checkbox[]');
+ 	  var values = "";
+      for (var i = 0, n = checkboxes.length; i < n; i++) {
+        if (checkboxes[i].checked) {
+          values += "," + checkboxes[i].value;
+        }
+      }
+      if (values) values = values.substring(1);
+ 	console.log(values);
+
+	if( text )
+	{
+		//alert('t');
+		if( values === ' Case Insensitive' )
+		{  
+			//alert('c i');
+		  var pattern=new RegExp("("+text+")", "gi");
+		  var new_text=searchpara.replace(pattern, "<span class='highlight'>"+text+"</span>");
+		  document.getElementById("search_para").innerHTML=new_text;
+		}
+
+		if( values === '' )
+		{  
+		  var pattern=new RegExp("("+text+")", "g");
+		  var new_text=searchpara.replace(pattern, "<span class='highlight'>"+text+"</span>");
+		  document.getElementById("search_para").innerHTML=new_text;
+		}
+
+		if( values === '  Match Whole Word' )
+		{
+			//alert('c i');
+			var pattern=new RegExp( "\\b" + text + "\\b", "g");
+		    var new_text=searchpara.replace(pattern, "<span class='highlight'>"+text+"</span>");
+		    document.getElementById("search_para").innerHTML=new_text;
+		}
+
+		if( values === ' Case Insensitive,  Match Whole Word' )
+		{
+			var pattern=new RegExp("\\b" + text + "\\b", "gi");
+		    var new_text=searchpara.replace(pattern, "<span class='highlight'>"+text+"</span>");
+		    document.getElementById("search_para").innerHTML=new_text;
+		}
+
+
+	}
+
+
+	/*if( text && caseInsen == '' ){
+
+		console.log(caseInsen);
+
+		var pattern=new RegExp("("+text+")", "g");
+	    var new_text=searchpara.replace(pattern, "<span class='highlight'>"+text+"</span>");
+	    document.getElementById("search_para").innerHTML=new_text;
+	}
+	if( text && matchWhole ){
+		var pattern=new RegExp("\\b" + text + "\\b", "g");
+	    var new_text=searchpara.replace(pattern, "<span class='highlight'>"+text+"</span>");
+	    document.getElementById("search_para").innerHTML=new_text;
+	}
+
+	if( text && matchWhole == '' ){
+
+	}*/
+}
+</script>
+</body>
+</html>
