@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>DRAG</title>
+</head>
+<style>
+    .box1{
+        border: 2px solid greenyellow;
+        height: 400px;
+        width: 400px;
+        float: left;
+        
+    }
+    .box2{
+        border: 2px solid greenyellow;
+        height: 400px;
+        width: 400px;
+        float: left;
+        margin-left: 100px;
+    }
+    .img{
+       float: right;
+    }
+    .color{
+        background-color: #17202A  ;
+    }
+</style>
+<body class="color">
+    <div class="box1" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" >
+    </div>
+    <div class="box2" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" >
+    </div>
+    <div class="img" >
+         <img src="1.png"  draggable="true" ondragstart="drag(event)" id="drag1" > <!--The ondragover event specifies where the dragged data can be dropped.-->
+    </div>
+<script >
+    function allowDrop(draggableEvent) {
+            draggableEvent.preventDefault(); // to prevent the browser default handling of the data
+    }
+
+    function drag(draggableEvent) {
+            draggableEvent.dataTransfer.setData("text", draggableEvent.target.id);
+    }
+
+    function drop(draggableEvent) {
+            draggableEvent.preventDefault();
+            var data = draggableEvent.dataTransfer.getData("text");
+            draggableEvent.target.appendChild(document.getElementById(data));
+    }
+</script>   
+</body>
+</html>
