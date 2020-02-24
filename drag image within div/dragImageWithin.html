@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>Drag Image </title>
+		<style>
+
+		  .disp {
+			overflow:hidden;
+			width: 500px;
+			height:500px;
+			border: 5px dotted black;
+		  }
+          #box{
+                position:relative;
+                left:100px;
+                overflow:hidden;
+                border:5px solid #ccc;
+                width:500px;
+                height:500px;
+                margin-left: 30%;
+          }
+          .color{
+            background-color: #220404;
+          }
+          .p{
+            color:white;
+            font-weight: bold;
+            font-size: 20px;
+          }
+		</style>
+
+
+	
+	</head>
+
+	<body class="color" onload="dragImage();"> <p class="p">Naruto And Kurama</p>
+    <div id="box" >
+
+        <div id="image" style="width:1600px; height:2560px; position:absolute; background-repeat:no-repeat;background-image:url( '1.jpg' );"></div> 
+        }
+    </div>
+
+
+
+<script>
+         var draggable = function(imageElement) {
+    imageElement.addEventListener('mousedown', function(e) {
+        e.stopPropagation();
+        if (e.target != imageElement)
+            return;
+        var offsetX = e.pageX - imageElement.offsetLeft;
+        var offsetY = e.pageY - imageElement.offsetTop;
+        function move(e) {
+            var image = document.getElementById('image');
+            var width = 400-image.clientWidth;
+            var height = 400-image.clientHeight;
+            imageElement.style.left = (e.pageX - offsetX) + 'px';
+            imageElement.style.top = (e.pageY - offsetY) + 'px';
+        }
+        function stop(e) {
+            document.removeEventListener('mousemove', move);
+            document.removeEventListener('mouseup', stop);
+        }
+        document.addEventListener('mousemove', move);
+        document.addEventListener('mouseup', stop);
+    });
+}
+
+function dragImage() {
+    var image = document.getElementById('image');
+    draggable(image);
+}
+        
+        </script>
+</body>
+</html>
